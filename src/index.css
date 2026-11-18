@@ -4,6 +4,12 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.table-note {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;

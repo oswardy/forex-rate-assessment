@@ -18,11 +18,19 @@ export default function ForexTable({forexRates,adjustedRates, errorMsg}){
     }
     function checkEvenNumber(value){
         return Number.isInteger(value) && value % 2 === 0;
+        //return Math.floor(value) % 2 === 0;
     }
 
     return (
         <>
             <h2>Forex Rates Table</h2>
+
+            <p className="table-note">
+                Note: Even numbers highlighting applies to integer values only.
+                Decimal values are not considered even or odd. Therefore, only HKD
+                is highlighted with the current exchange rates.
+                For more details, please refer to the Remarks section at README.
+            </p>
             <div className="table-container">
                     <table>
                         <thead>
@@ -38,6 +46,12 @@ export default function ForexTable({forexRates,adjustedRates, errorMsg}){
                                 const shouldHighlight = checkEvenNumber(rates) 
                                 || checkEvenNumber(adjustedRates[currency]) 
                                 || currency === "HKD";
+                                console.log(
+                                    currency,
+                                    checkEvenNumber(rates),
+                                    checkEvenNumber(adjustedRates[currency]),
+                                    shouldHighlight
+                                );
 
                                 return(
                                     <tr 
