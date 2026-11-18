@@ -8,7 +8,7 @@ export default function App() {
   async function getForexRates(){
     try {
       const response = await fetch(
-        "http://localhost:5050/api/forex"
+        "/api/forex"
       );
 
       if(!response.ok){

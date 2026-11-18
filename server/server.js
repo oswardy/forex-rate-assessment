@@ -26,7 +26,7 @@ app.get("/api/forex", async(req,res)=>{
         }
 
         const data = await response.json();
-        res.json(data);
+        return res.json(data);
     } catch (error) {
         console.error("Forex API error",error);
 
