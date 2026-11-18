@@ -28,7 +28,7 @@ A Forex Rates application developed as part of a technical assessment.
 - The adjusted rate is calculated by adding 10.0002 to the original rate retrieved from the API.
 - Both original and adjusted rates are displayed to six decimal places for readability.
 - Decimal values are not treated as even or odd numbers. The even-number check only applies to integer values. HKD is highlighted separately regardless of its rate value.
-- The requirement asks for a function to check whether a value is even. Therefore, I used Number.isInteger() and did not use Math.floor(), which would remove decimal places before checking and potentially allow more rows to be highlighted. I also tried the Math.floor() approach but left it commented out.
+- The requirement asks for a function to check whether a value is even. Therefore, I used Number.isInteger() and did not use Math.floor(), which would remove decimal places before checking and potentially allow more rows to be highlighted. I did tried the Math.floor() approach but left it commented out.
 
 ## Getting Started (Local Development)
 
